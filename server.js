@@ -1,8 +1,8 @@
 console.log('starting server........');
 const express = require('express');
 const hbs = require('hbs');
-
-
+// console.log("prossess.env", JSON.stringify(process.env, undefined, 2));
+const port = process.env.PORT || 5000;
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -31,8 +31,8 @@ function upCase(text){
     return text.toUpperCase();
 }
 
-app.listen(5000, () => {
-    console.log("server is Up");
+app.listen(port, () => {
+    console.log(`server is Up on port ${port}`);
 });
 
 // var about = {
