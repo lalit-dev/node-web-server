@@ -19,12 +19,12 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use((req, res, next) => {
-    console.log(" stopped process")
-    res.render('maintainance.hbs', {
-        errorMessage: 'we are optimizing app to improve your experience! '
-    })
-})
+// app.use((req, res, next) => {
+//     console.log(" stopped process")
+//     res.render('maintainance.hbs', {
+//         errorMessage: 'we are optimizing app to improve your experience! '
+//     })
+// })
 
 function upCase(text){
     console.log("inside upCase");
