@@ -59,6 +59,13 @@ app.get('/about', (req, res) => {
     })
 })
 
+app.get('/projects', (req, res) => {
+    // res.send(projects);
+    res.render('projects.hbs', {
+        title:' my projects page'
+    })
+})
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'invalid URL'
